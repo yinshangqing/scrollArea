@@ -20,7 +20,7 @@ public:
 
 private:
     Ui::Widget *ui;
-    QScrollArea *m_pScrollArea;
+//    QScrollArea *m_pScrollArea;
 };
 
 #endif // WIDGET_H

@@ -7,16 +7,19 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
-    QHBoxLayout * hlayout = new QHBoxLayout;
-    m_pScrollArea = new QScrollArea(this);
-    m_pScrollArea->setBackgroundRole(QPalette::Dark);
-    hlayout->addWidget(m_pScrollArea);
-    hlayout->setContentsMargins(0,0,0,0);
-    this->setLayout(hlayout);
-    QWidget *wdg = new QWidget;
-    wdg->resize(1000,2000);
-    m_pScrollArea->setWidget(wdg);
-
+//    QHBoxLayout * hlayout = new QHBoxLayout;
+//    m_pScrollArea = new QScrollArea(this);
+//    m_pScrollArea->setBackgroundRole(QPalette::Dark);
+//    hlayout->addWidget(m_pScrollArea);
+//    hlayout->setContentsMargins(0,0,0,0);
+//    this->setLayout(hlayout);
+//    QWidget *wdg = new QWidget;
+//    wdg->resize(1000,2000);
+//    m_pScrollArea->setWidget(wdg);
+    QWidget *wdg = new QWidget(ui->scrollAreaWidgetContents);
+//    wdg->resize(1000,2000);
+//    ui->scrollArea->addScrollBarWidget();
+    ui->scrollAreaWidgetContents->setFixedSize(1000,2000);
 }
 
 Widget::~Widget()
